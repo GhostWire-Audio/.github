@@ -1,10 +1,9 @@
 # GhostWire Audio
-*A one-person lab for understanding real-time sound systems*
+*A one-person company for understanding real-time sound systems*
 
 GhostWire Audio is an open-source learning and research project focused on how audio software actually works under the hood.
 
-This is not a product company and not a plugin collection.  
-It is a long-term engineering project exploring the systems that make sound software possible — buffers, timing, threading, DSP, and architecture.
+The whole thing is a long-term engineering project exploring the systems that make sound software possible — buffers, timing, threading, DSP, and architecture.
 
 The goal is simple: build real tools while learning how real software is designed.
 
@@ -13,7 +12,7 @@ The goal is simple: build real tools while learning how real software is designe
 ## What This Project Is
 
 Most audio tools hide their machinery behind polished interfaces.  
-GhostWire exists to expose that machinery and make it understandable.
+GhostWire exists to expose that machinery and make it understandable to the aspiring indie developer.
 
 Here, sound is treated as a systems programming problem:
 
@@ -31,7 +30,9 @@ Instead of starting with features, this project starts with infrastructure.
 GhostWire is split into multiple repositories, each representing a different layer of the same system.
 
 ### `gw-core`
-The engine room.
+The core audio engine.
+
+*In-progress*
 
 A real-time-safe C++ audio engine and DSP framework responsible for:
 - audio buffers
@@ -41,12 +42,14 @@ A real-time-safe C++ audio engine and DSP framework responsible for:
 - offline rendering
 - platform audio backends
 
-Everything else in GhostWire depends on this.
+Everything else in GhostWire depends on this (except for MicroDSP, which throws in some JUCE as well).
 
 ---
 
 ### `gw-testlab`
 The measuring instruments.
+
+*Conceptualized, but hasn't begun*
 
 Tools for testing, visualizing, and validating DSP behavior:
 - signal generation
@@ -60,6 +63,8 @@ This ensures systems behave correctly, not just audibly.
 
 ### `spectral-ghost`
 The public prototype.
+
+*Conceptualized, but hasn't begun*
 
 An experimental plugin built on top of the engine.  
 This is where infrastructure becomes a creative tool.
